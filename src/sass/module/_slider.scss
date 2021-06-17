@@ -1,0 +1,66 @@
+.slick-dots {
+  text-align: right;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: $primary-color;
+}
+
+.slick-dots li button:before {
+  opacity: 1;
+  color: #c0c0c0;
+}
+
+.slider {
+  &__img {
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: flex-end;
+    // cursor: pointer;
+
+    li {
+      display: inline-block;
+      &:nth-child(n + 2) {
+        margin-left: rem(4);
+
+        @include mq("md") {
+          margin-left: rem(5);
+        }
+      }
+
+      button {
+        position: relative;
+        text-indent: -9999px;
+
+        &::before {
+          font-family: "slick";
+          content: "•";
+          text-indent: 0px;
+          font-size: rem(6);
+          color: #c0c0c0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding-top: rem(7);
+
+          @include mq("md") {
+            padding-top: rem(3);
+            font-size: rem(8);
+          }
+        }
+      }
+    }
+
+    li.slick-active button::before {
+      content: "•";
+      color: $primary-color;
+    }
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}

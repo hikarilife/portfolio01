@@ -1,0 +1,13 @@
+.marker {
+  padding-right: rem(2);
+  padding-left: rem(2);
+
+  @include mq("md") {
+    padding-right: rem(15);
+    padding-left: rem(15);
+  }
+
+  &--yellow {
+    background: linear-gradient(transparent 80%, #f5f534 0%);
+  }
+}

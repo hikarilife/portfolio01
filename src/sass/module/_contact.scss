@@ -1,0 +1,50 @@
+.contact {
+  padding-top: rem(81);
+  @include mq("md") {
+    padding-top: rem(100);
+  }
+  &__inner {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+    text-align: center;
+    background-color: #f7f7f7;
+    @include mq("md") {
+      padding-top: rem(80);
+      padding-bottom: rem(79);
+    }
+  }
+  &__title {
+    padding-left: rem(3);
+    @include mq("md") {
+      letter-spacing: ls(-1em);
+    }
+  }
+
+  &__sub-title {
+    padding-top: rem(3);
+    padding-left: rem(1);
+
+    @include mq("md") {
+      padding-top: rem(2);
+      padding-left: rem(2);
+    }
+  }
+
+  &__text {
+    font-family: $second-font-family, $base-font-family;
+    font-size: rem(14);
+    letter-spacing: ls(50em);
+    font-weight: $light;
+    line-height: calc(25 / 14);
+    padding-top: rem(23);
+
+    @include mq("md") {
+      font-size: rem(15);
+      line-height: calc(32 / 15);
+    }
+  }
+
+  &__btn {
+    padding-top: rem(25);
+  }
+}

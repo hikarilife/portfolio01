@@ -1,0 +1,116 @@
+.works {
+  position: relative;
+  @include mq("md") {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+
+  &__inner {
+    position: relative;
+    text-align: center;
+    margin-top: rem(87);
+    padding-right: $padding-sp;
+    padding-bottom: rem(60);
+    padding-left: $padding-sp;
+
+    @include mq("md") {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: rem(1261);
+      padding-top: rem(60);
+      padding-right: 0;
+      padding-bottom: rem(48);
+      padding-left: 0;
+      margin-top: rem(140);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__left {
+    @include mq("md") {
+      width: percentage(750 / 1261);
+    }
+  }
+
+  &__slider {
+    // max-width: rem(335);
+    max-width: rem(600);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq("md") {
+      width: 100%;
+      max-width: rem(750);
+    }
+  }
+
+  &__right {
+    @include mq("md") {
+      flex: 1;
+      padding-bottom: rem(12);
+      padding-left: rem(20);
+      max-width: rem(450);
+      // min-width: rem(360);
+      min-height: rem(225);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      z-index: -9999;
+      width: 100%;
+      height: percentage(430 / 545);
+      background-color: #f0f0f0;
+
+      @include mq("md") {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        width: percentage(837 / 1261);
+        height: 100%;
+      }
+    }
+  }
+
+  &__heading {
+    padding-top: rem(15);
+
+    @include mq("md") {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    padding-left: rem(2);
+
+    @include mq("md") {
+      padding-left: rem(3);
+    }
+  }
+
+  &__sub-title {
+    padding-top: rem(3);
+    padding-left: rem(1);
+  }
+
+  &__text {
+    font-family: $second-font-family, $base-font-family;
+    font-size: rem(14);
+    letter-spacing: ls(50em);
+    font-weight: $light;
+    line-height: calc(25 / 14);
+    padding-top: rem(27);
+    @include mq("md") {
+      font-size: rem(15);
+    }
+  }
+
+  &__btn {
+    padding-top: rem(21);
+  }
+}

@@ -1,0 +1,30 @@
+.page-top {
+  z-index: 9999;
+  display: inline-block;
+  position: fixed;
+  right: rem(25);
+  bottom: rem(25);
+  height: rem(50);
+  width: rem(50);
+  color: $white;
+  background-color: $primary-color;
+  border-radius: 50%;
+  text-align: center;
+  font-size: rem(19);
+  padding-top: rem(9);
+  border: 1px solid $primary-color;
+
+  @include mq("md") {
+    right: rem(45);
+    bottom: rem(45);
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $primary-color;
+    opacity: 1;
+  }
+
+  &__icon {
+  }
+}

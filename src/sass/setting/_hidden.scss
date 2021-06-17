@@ -1,0 +1,14 @@
+//デスクトップのみ表示
+.--desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.--mobile {
+  @include mq("md") {
+    display: none !important;
+  }
+}

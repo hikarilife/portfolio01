@@ -1,0 +1,35 @@
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+
+  a,
+  .current {
+    width: rem(45);
+    border-radius: 50%;
+    text-align: center;
+    line-height: rem(45);
+    font-size: rem(20);
+    font-weight: $bold;
+  }
+
+  a {
+    color: $white;
+    background: linear-gradient(#7633a4, #2c116b);
+
+    &:hover {
+      opacity: 1;
+      color: $primary-color;
+      background: $white;
+      box-shadow: 0 0 0 2px $primary-color;
+    }
+
+    &:nth-child(n + 2) {
+      margin-left: rem(10);
+    }
+  }
+
+  .current {
+    color: #4f31a5;
+    background-color: #f1ebf8;
+  }
+}

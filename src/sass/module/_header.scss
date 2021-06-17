@@ -1,0 +1,38 @@
+.header {
+  height: rem(62);
+  z-index: 100;
+  position: fixed;
+  color: $white;
+  width: 100%;
+  transition: height 0.5s;
+
+  @include mq("md") {
+    height: rem(80);
+  }
+  &__inner {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding-right: rem(15);
+    padding-left: rem(15);
+
+    @include mq("md") {
+      padding-right: rem(30);
+      padding-left: rem(28);
+    }
+  }
+
+  &__logo {
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+  }
+
+  &--active {
+    background-color: #21054d;
+    height: rem(65);
+  }
+}

@@ -1,0 +1,75 @@
+.service {
+  @include mq("md") {
+    padding-right: rem(25);
+    padding-left: rem(25);
+  }
+  &__inner {
+    padding-top: rem(70);
+    padding-right: rem(20);
+    padding-left: rem(20);
+
+    @include mq("md") {
+      max-width: $inner;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: rem(143);
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__heading {
+  }
+
+  &__title {
+    text-align: center;
+    padding-left: rem(2);
+
+    @include mq("md") {
+      letter-spacing: ls(50em);
+    }
+  }
+
+  &__sub-title {
+    text-align: center;
+    padding-top: rem(2);
+    padding-left: rem(1);
+  }
+
+  &__body {
+    max-width: rem(600);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq("md") {
+      max-width: none;
+      display: flex;
+      padding-top: rem(30);
+    }
+  }
+
+  &__media {
+    margin-right: auto;
+    margin-left: auto;
+
+    &:first-child {
+      padding-top: rem(28);
+      @include mq("md") {
+        padding-top: 0;
+      }
+    }
+
+    &:nth-child(n + 2) {
+      padding-top: rem(36);
+      @include mq("md") {
+        padding-top: 0;
+        margin-left: rem(30);
+      }
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    padding-top: rem(22);
+  }
+}

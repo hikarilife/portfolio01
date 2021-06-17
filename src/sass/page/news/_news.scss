@@ -1,0 +1,32 @@
+.news {
+  &__inner {
+    padding-top: rem(40);
+    padding-bottom: rem(34);
+    width: percentage(336 / 375);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq("md") {
+      display: flex;
+      max-width: rem(915);
+      padding-top: rem(60);
+      padding-left: rem(3);
+    }
+  }
+
+  &__post {
+    &:nth-child(n + 2) {
+      padding-top: rem(20);
+
+      @include mq("md") {
+        padding-top: rem(18);
+      }
+    }
+  }
+
+  &__contact {
+    @include mq("md") {
+      padding-top: rem(110);
+    }
+  }
+}

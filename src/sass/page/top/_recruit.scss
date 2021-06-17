@@ -1,0 +1,80 @@
+.recruit {
+  @include mq("md") {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+  &__inner {
+    padding-bottom: rem(50);
+    text-align: center;
+    background-color: #f7f7f7;
+
+    @include mq("md") {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      padding-bottom: 0;
+      // width: percentage(1100 / 1440);
+      max-width: $inner;
+      min-width: rem(700);
+      min-height: rem(300);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__img {
+    @include mq("md") {
+      max-width: rem(665);
+    }
+  }
+
+  &__left {
+    padding-top: rem(60.7);
+    @include mq("md") {
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 0;
+      min-width: rem(280);
+    }
+  }
+
+  &__title {
+    padding-left: rem(2);
+    @include mq("md") {
+      padding-left: rem(1);
+    }
+  }
+
+  &__sub-title {
+    padding-top: rem(3.5);
+    padding-left: rem(1.8);
+    @include mq("md") {
+      padding-top: rem(2);
+      padding-left: 0;
+    }
+  }
+
+  &__body {
+  }
+
+  &__text {
+    font-family: $second-font-family, $base-font-family;
+    font-size: rem(14);
+    letter-spacing: ls(50em);
+    font-weight: $light;
+    line-height: calc(25 / 14);
+    padding-top: rem(28);
+    padding-left: rem(2);
+    @include mq("md") {
+      font-size: rem(15);
+    }
+  }
+
+  &__btn {
+    padding-top: rem(20);
+    padding-right: rem(20);
+    @include mq("md") {
+      padding-right: rem(1);
+    }
+  }
+}

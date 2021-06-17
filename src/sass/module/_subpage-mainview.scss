@@ -1,0 +1,60 @@
+.subpage-mainview {
+  height: rem(190);
+
+  @include mq("md") {
+    height: rem(240);
+  }
+
+  &__inner {
+    position: relative;
+    @include mq("md") {
+      text-align: center;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    height: rem(190);
+    @include mq("md") {
+      height: rem(240);
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: $white;
+    padding-top: rem(55);
+    padding-left: rem(2);
+
+    @include mq("md") {
+      padding-top: rem(38);
+    }
+  }
+
+  &__copy-en {
+    font-size: rem(30);
+    font-weight: $bold;
+    // color: $white;
+    letter-spacing: ls(50em);
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include mq("md") {
+      font-size: rem(36);
+    }
+  }
+
+  &__copy-jp {
+    text-align: center;
+    font-size: rem(13);
+    font-weight: $bold;
+    letter-spacing: ls(50em);
+    line-height: 1;
+    padding-top: rem(8.5);
+  }
+}

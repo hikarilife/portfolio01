@@ -1,0 +1,55 @@
+.scroll {
+  display: inline-block;
+  position: absolute;
+  right: rem(14);
+  bottom: 0;
+  z-index: 2;
+  padding-bottom: rem(58);
+  overflow: hidden;
+  color: $white;
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: 1;
+  letter-spacing: ls(80em);
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+
+  @include mq("md") {
+    right: rem(24);
+    padding-bottom: rem(89);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: rem(1);
+    height: rem(50);
+    background: $white;
+    animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    @include mq("md") {
+      height: rem(80);
+    }
+  }
+}
+
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  35% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  35.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  70%,
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}

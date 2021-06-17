@@ -1,0 +1,10 @@
+.text {
+  font-family: $second-font-family, $base-font-family;
+  font-size: rem(14);
+  letter-spacing: ls(50em);
+  font-weight: $light;
+
+  @include mq("md") {
+    font-size: rem(15);
+  }
+}

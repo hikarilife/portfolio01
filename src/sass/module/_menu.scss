@@ -1,0 +1,152 @@
+.menu {
+  height: inherit;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__icon {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    width: rem(44);
+    height: rem(44);
+    @include mq("md") {
+      display: none;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: $white;
+    width: rem(32);
+    height: rem(2);
+    transition: width 0.5s, transform 0.5s, top 0.5s, background 0.5s;
+
+    &:nth-child(1) {
+      top: rem(-12);
+    }
+
+    &:nth-child(3) {
+      top: rem(12);
+    }
+  }
+
+  &__nav {
+    z-index: 2;
+    background: linear-gradient(135deg, #571e83, #19074a);
+    color: $white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    transition: right 0.5s;
+
+    @include mq("md") {
+      background: transparent;
+      width: auto;
+      height: inherit;
+      right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: inherit;
+    justify-content: center;
+
+    @include mq("md") {
+      flex-direction: row;
+      height: 100%;
+      padding-right: rem(17);
+    }
+  }
+
+  &__item {
+    @include mq("md") {
+      height: inherit;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: rem(15);
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: ls(50em);
+    line-height: 1;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    width: 100%;
+
+    @include mq("md") {
+      position: relative;
+      display: flex;
+      align-items: center;
+      letter-spacing: ls(52em);
+      height: inherit;
+      padding-top: rem(0);
+      padding-bottom: rem(0);
+      padding-right: rem(12.5);
+      padding-left: rem(12.5);
+    }
+
+    &::after {
+      @include mq("md") {
+        box-sizing: content-box;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $white;
+        bottom: rem(20);
+        transition: width 0.3s ease-in-out;
+      }
+    }
+
+    &:hover::after {
+      @include mq("md") {
+        width: calc(100% - 25px);
+      }
+    }
+  }
+
+  // アイコンクリックしたら
+  &__checkbox:checked ~ {
+    .menu__icon {
+      .menu__line {
+        width: rem(24);
+
+        &:nth-child(1) {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          background: transparent;
+        }
+
+        &:nth-child(3) {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          top: 0;
+        }
+      }
+    }
+
+    .menu__nav {
+      right: 0;
+    }
+  }
+}

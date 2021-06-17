@@ -1,0 +1,13 @@
+.logo {
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: calc(22 / 18);
+  letter-spacing: ls(18em);
+  text-transform: uppercase;
+
+  @include mq("md") {
+    font-size: rem(23);
+    letter-spacing: ls(50em);
+    line-height: 1;
+  }
+}

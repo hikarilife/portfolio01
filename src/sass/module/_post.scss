@@ -1,0 +1,48 @@
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  @include mq("md") {
+    flex-wrap: nowrap;
+  }
+
+  &__date {
+    font-size: rem(15);
+    letter-spacing: ls(100em);
+    line-height: rem(19);
+    padding-right: rem(15);
+    @include mq("md") {
+      padding-right: rem(19);
+    }
+  }
+
+  &__category {
+    font-size: rem(11);
+    font-weight: $bold;
+    letter-spacing: ls(50em);
+    line-height: calc(15 / 11);
+    min-width: rem(82);
+    height: rem(19);
+    background-color: $grey;
+    border-radius: rem(50);
+    text-align: center;
+    padding-top: rem(3);
+    padding-bottom: rem(2);
+  }
+
+  &__text {
+    font-family: $second-font-family, $base-font-family;
+    font-size: rem(14);
+    letter-spacing: ls(50em);
+    font-weight: $light;
+    line-height: calc(27 / 14);
+    padding-top: rem(8);
+
+    @include mq("md") {
+      font-size: rem(15);
+      padding-left: rem(20);
+      line-height: calc(27 / 15);
+      @include trimLhTop(calc(27 / 14));
+      padding-top: 0;
+    }
+  }
+}

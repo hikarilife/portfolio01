@@ -1,0 +1,33 @@
+.path {
+  background-color: #f7f7f7;
+  @include mq("md") {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+  &__inner {
+    display: flex;
+    padding-left: rem(20);
+    @include mq("md") {
+      max-width: $inner;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    font-size: rem(11);
+    font-weight: $regular;
+    letter-spacing: ls(50em);
+    line-height: rem(25);
+    text-transform: uppercase;
+
+    @include mq("md") {
+      font-size: rem(12);
+      line-height: rem(45);
+    }
+  }
+
+  &__link {
+  }
+}

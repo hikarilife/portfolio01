@@ -1,0 +1,12 @@
+.underline-menu {
+  &--white::after {
+    box-sizing: content-box;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    position: absolute;
+    bottom: rem(20);
+  }
+}

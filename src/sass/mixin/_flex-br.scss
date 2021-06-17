@@ -1,0 +1,7 @@
+.flex-br {
+  width: 100%;
+
+  @include mq("md") {
+    width: 0;
+  }
+}

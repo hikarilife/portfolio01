@@ -1,0 +1,52 @@
+.footer {
+  &__inner {
+    color: $white;
+    background-color: $black;
+    padding-top: rem(50);
+    padding-right: rem(20);
+    padding-bottom: rem(20);
+    padding-left: rem(20);
+    @include mq("md") {
+      padding-top: rem(47);
+      padding-bottom: rem(61);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq("md") {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: rem(10);
+    font-size: rem(12);
+    letter-spacing: ls(50em);
+    line-height: calc(15 / 12);
+    font-weight: $bold;
+    text-transform: uppercase;
+    @include mq("md") {
+      font-size: rem(14);
+      letter-spacing: ls(60em);
+      line-height: calc(15 / 14);
+      padding: rem(14.5);
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: rem(10);
+    letter-spacing: ls(50em);
+    line-height: 1;
+    font-weight: $regular;
+    color: $secondary-color;
+    padding-top: rem(32);
+
+    @include mq("md") {
+      padding-top: rem(11);
+    }
+  }
+}
